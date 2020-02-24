@@ -1,0 +1,255 @@
+/** fonts import **/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
+/** reset css **/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat';
+}
+
+/** personal css **/
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eee;
+}
+
+.content{
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 55%;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /** box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); **/
+}
+
+.content::before{
+    content: "";
+    position: absolute;
+    background-color: coral;
+    width: 40%;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+
+left: 0%;
+}
+
+.first-content{
+    display: flex;
+}
+
+
+.first-content .second-column{
+    z-index: 11;
+}
+
+.title{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.title-primary{
+    color: #fff;
+}
+
+.title-second{
+    color: coral;
+}
+
+.description{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 30px;
+}
+
+.description-primary{
+    color: white;
+}
+
+.description-second{
+    color: gray;
+}
+
+.forgot-password{
+    margin: 1rem 0;
+    font-size: 14px; 
+    color: gray;
+    text-decoration: none;
+    text-align: right;
+}
+
+.forgot-password:hover{
+    color: coral;
+}
+
+.forgot-password::first-letter{
+    text-transform: capitalize;
+}
+
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px 50px;
+    font-weight: 300;
+    width: 200px;
+    align-self: center;
+    margin-top: 1rem;
+    border: none;
+}
+
+.btn-primary{
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color .5s;
+}
+
+.btn-primary:hover{
+    background-color: white;
+    color: coral;
+}
+
+.btn-second{
+    background-color: coral;
+    border: 1px solid coral;
+    transition: background-color .5s;
+}
+
+.btn-second:hover{
+    background-color: white;
+    color: coral;
+}
+
+.first-column{
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+
+.second-column{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media{
+    margin: 1rem 0;
+}
+
+.list-social-media{
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+}
+
+.items-social-media{
+    border: 1px solid lavender;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: darkgray;
+    transition: background-color .8s;
+}
+
+.items-social-media:hover{
+    background-color: coral;
+    color: white;
+}
+
+.items-social-media:not(:first-child){
+    margin-left: 10px;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin: 10px;
+
+}
+
+.form input{
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: #eeeeee;
+    border-radius: 0 10px 10px 0;
+    padding: 0 5px;
+}
+
+.label-input{
+    background-color: #eee; 
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.icon-modify{
+    color: coral;
+    padding-left: 10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+/** second content **/
+
+.second-content{
+    position: absolute;
+    display: flex;
+}
+
+.second-content .first-column{
+    order: 2;
+    z-index: -1;
+}
+
+.second-content .second-column{
+    order 1;
+    z-index: -1;
+}
+
+
+.sign-in-js .first-content .first-column,
+.sign-in-js .first-content .second-column{
+    z-index: -1;
+} 
+
+.sign-in-js .second-content .first-column,
+.sign-in-js .second-content .second-column{
+    z-index: 13;
+}
+
+.sign-in-js .content::before{
+    left: 60%;
+    border-radius: 0 15px 15px 0;
+}
+
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-ccontent .second-column{
+    z-index: -1;
+}
+
+.sign-up-js .first-content .first-column,
+.sign-up-js .first-content .second-column{
+    z-index: 13;
+} 
